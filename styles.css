@@ -1,0 +1,74 @@
+/* CSS styles for the card */
+#my-card {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+    position: relative; /* To position the heading and icon */
+  }
+  
+  /* CSS styles for the heading */
+  #my-card h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #4285f4; /* Google blue color */
+    margin: 0 0 10px 48px; /* Adjust the margin as needed */
+    display: inline-block;
+  }
+  
+  /* CSS styles for the icon */
+  #my-card .icon {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    background-image: url('https://thumbs.dreamstime.com/z/chatgpt-logo-vinnitsa-ukraine-may-editorial-vector-illustration-isolated-white-background-277669099.jpg?w=768'); /* Replace with the actual icon path */
+    background-size: cover;
+  }
+  
+  /* CSS styles for the completion text */
+  #my-card .formatted-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 10px;
+  
+    /* Custom list styles */
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  #my-card .formatted-text ol li{
+    list-style-type: decimal;
+  }
+  #my-card .formatted-text ul li{
+    list-style-type:circle;
+  }
+
+  #my-card .loading-text {
+    font-size: 30px;
+    color: #555;
+    margin-top: 10px;
+  }
+
+  @keyframes loadingAnimation {
+    0% {
+      content: 'Loading.';
+    }
+    33% {
+      content: 'Loading..';
+    }
+    66% {
+      content: 'Loading...';
+    }
+  }
+  
+  #my-card .loading-text::after {
+    display: inline-block;
+    content: 'Loading...';
+    animation: loadingAnimation 1s infinite;
+  }
